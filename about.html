@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Sambal Bakar Petir</title>
+        <link rel="icon" type="image/png" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQM83hXnv9bAtutx022qPkl9kJpFtvqNObpLg&s">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-red: #9b1111;
+            --accent: #f1c40f;
+            --white: #ffffff;
+            --dark-red: #640000;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        
+        /* --- SLIDESHOW BERBEDA (Tema Suasana Resto) --- */
+        .bg-slideshow {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -2; list-style: none;
+        }
+        .bg-slideshow li {
+            position: absolute; width: 100%; height: 100%;
+            background-size: cover; background-position: center;
+            opacity: 0; animation: animAbout 15s linear infinite;
+        }
+        /* Gambar Slide Baru */
+        .bg-slideshow li:nth-child(1) { background-image: url('https://images.unsplash.com/photo-1552566626-52f8b828add9?w=1200'); animation-delay: 0s; }
+        .bg-slideshow li:nth-child(2) { background-image: url('https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1200'); animation-delay: 5s; }
+        .bg-slideshow li:nth-child(3) { background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200'); animation-delay: 10s; }
+
+        @keyframes animAbout {
+            0% { opacity: 0; } 10% { opacity: 1; } 33% { opacity: 1; } 43% { opacity: 0; } 100% { opacity: 0; }
+        }
+
+        .bg-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(40, 0, 0, 0.9); z-index: -1;
+        }
+
+        nav {
+            background: var(--dark-red);
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            position: sticky; top: 0; z-index: 100;
+            border-bottom: 2px solid var(--accent);
+        }
+        .nav-link { color: var(--white); text-decoration: none; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; transition: 0.3s; }
+        .nav-link:hover { color: var(--accent); }
+
+        .container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+        
+        .about-card {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid var(--accent);
+            text-align: center;
+            backdrop-filter: blur(5px);
+        }
+
+        .about-card h1 { color: var(--accent); font-size: 2rem; margin-bottom: 20px; letter-spacing: 2px; }
+        .about-card p { line-height: 1.8; font-size: 1rem; color: #ffcccc; margin-bottom: 20px; }
+        
+        .stats {
+            display: flex; justify-content: space-around;
+            margin-top: 30px; padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .stat-box h2 { color: var(--accent); font-size: 1.8rem; }
+        .stat-box p { font-size: 0.7rem; text-transform: uppercase; color: white; }
+
+        .btn-home {
+            display: inline-block; margin-top: 30px;
+            padding: 10px 30px; background: var(--accent);
+            color: black; text-decoration: none; border-radius: 50px;
+            font-weight: bold; transition: 0.3s;
+        }
+        .btn-home:hover { background: white; transform: translateY(-3px); }
+    </style>
+</head>
+<body>
+
+<ul class="bg-slideshow"><li></li><li></li><li></li></ul>
+<div class="bg-overlay"></div>
+
+<nav>
+    <a href="coba.html#bakar" class="nav-link">Menu</a>
+    <a href="about.html" class="nav-link" style="color: var(--accent);">About Us</a>
+</nav>
+
+<div class="container">
+    <div class="about-card">
+        <h1>ABOUT US</h1>
+        <p><b>Sambal Bakar Petir</b> hadir sebagai pelopor rasa pedas otentik yang membakar semangat! Dimulai dari resep keluarga yang diturunkan antar generasi, kami menyajikan hidangan dengan sambal yang dibakar langsung di atas cobek panas.</p>
+
+        <p>Filosofi "Petir" kami melambangkan kecepatan pelayanan dan rasa pedas yang menggelegar namun tetap bikin ketagihan. Kami percaya bahwa makanan enak tidak harus mahal, itulah mengapa kami hadir di Bekasi untuk semua kalangan.</p>
+
+        <div class="about-card">
+  
+
+    <div class="menu-info" style="margin: 30px 0; padding: 20px; background: rgba(255, 255, 255, 0.05); border-radius: 15px; border: 1px dashed var(--accent); text-align: left;">
+        <div style="margin-bottom: 20px;">
+            <h3 style="color: var(--accent); font-size: 1.1rem; margin-bottom: 5px;"><i class="fas fa-box-open"></i> APA ITU PAKET?</h3>
+            <p style="font-size: 0.9rem; color: #ffcccc; margin: 0;">Pilihan lengkap untuk kenyang maksimal! Setiap pembelian <b>Paket</b> sudah termasuk <b>Nasi Putih, Lauk Utama, Tempe, Tahu, dan Lalapan Segar.</b></p>
+        </div>
+        <div>
+            <h3 style="color: var(--accent); font-size: 1.1rem; margin-bottom: 5px;"><i class="fas fa-utensils"></i> APA ITU ALA CARTE?</h3>
+            <p style="font-size: 0.9rem; color: #ffcccc; margin: 0;">Pilihan fleksibel bagi Anda yang ingin menambah lauk saja. Pembelian <b>Ala Carte</b> hanya berisi <b>Lauk Utama dan Sambal Bakar</b> tanpa nasi atau tambahan lainnya.</p>
+        </div>
+    </div>
+
+</div>
+    
+        <a href="coba.html" class="btn-home">KEMBALI KE MENU</a>
+    </div>
+</div>
+
+</body>
+</html>
